@@ -46,6 +46,16 @@ const navAnchor = Array.from(document.getElementsByTagName('a'));
 // Run for each to map anchors to nav-items via textContent
 navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`], (anchor.style.color = "green")));
 
+const prependNav = document.createElement("a");
+prependNav.innerHTML = '<a href="#" style="color: green">Prepend</a>';
+
+const appendNav = document.createElement("a");
+appendNav.innerHTML = '<a href="#" style="color: green">Append</a>';
+
+const nav = document.querySelector("nav");
+nav.prepend(prependNav);
+// nav.append(appendNav);
+nav.appendChild(appendNav);
 
 // const navElem = document.createElement("a");
 // navElem.innerHTML = '<a href="#topofpage" style="color: green" id = topofpage >Top of Page</a>';
