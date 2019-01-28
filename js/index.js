@@ -84,5 +84,12 @@ mainIMG.src = siteContent["main-content"]["middle-img-src"];
 
 // Contact Header setting
 document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"];
-// Footer targetting and setting
+
+// Contact P Targeting and setting
+const contactPTags = Array.from(document.querySelectorAll('.contact p'))
+contactPTags[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
+contactPTags[1].textContent = siteContent.contact.phone;
+contactPTags[2].textContent = siteContent.contact.email;
+
+// Footer targeting and setting
 document.querySelector("footer p").textContent = siteContent.footer.copyright;
