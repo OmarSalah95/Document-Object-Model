@@ -60,3 +60,13 @@ ctaBtn.textContent = siteContent.cta.button;
 const ctaIMG = document.getElementById("cta-img");
 // Link iMG src
 ctaIMG.src = siteContent.cta["img-src"];
+
+// Main content General selectors
+// Select Main H4
+const mainH4 = documetn.getElementsByTagName('h4');
+Array.from(mainH4);
+// Apply textContent
+mainH4.forEach(item => item.includes('-h4').textContent = item[i]);
+
+
+const mainP = document.getElementsByTagName('p')
