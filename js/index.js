@@ -39,9 +39,18 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent.nav["img-src"])
 
-// Indicate select anchor tags in nav and convert to array.
+// Select anchor tags in nav and convert to array.
 const navAnchor = Array.from(document.getElementsByTagName('a'));
 // Run for each to map anchors to nav-items via textContent
-navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`]));
+navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i}`]));
+
+// Select CTA H1 
+const ctaH1 = document.querySelector(".cta-text h1");
+//Apply text content
+ctaH1.textContent = siteContent.cta.h1;
+
+//Select CTA Button
+const ctaBtn = document.querySelector(".cta-text button");
+ctaBtn.textContent = siteContent.cta.button;
