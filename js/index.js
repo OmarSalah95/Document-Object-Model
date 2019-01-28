@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent.nav["img-src"])
 // Select anchor tags in nav and convert to array.
 const navAnchor = Array.from(document.getElementsByTagName('a'));
 // Run for each to map anchors to nav-items via textContent
-navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i}`]));
+navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`]));
 
 // Select CTA H1 
 const ctaH1 = document.querySelector(".cta-text h1");
@@ -52,32 +52,37 @@ const ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = siteContent.cta.h1;
 
 //Select CTA Button
-const ctaBtn = document.querySelector(".cta-text button");
-//Apply text content
-ctaBtn.textContent = siteContent.cta.button;
+document.querySelector(".cta-text button").textContent = siteContent.cta.button;
 
 //Select CTA IMG
-const ctaIMG = document.getElementById("cta-img");
-// Link iMG src
-ctaIMG.src = siteContent.cta["img-src"];
+document.getElementById("cta-img").src = siteContent.cta["img-src"];
 
-// Main content General selectors
+// Main content selectors
 // Select Main H4
 const mainH4 = Array.from(document.getElementsByTagName('h4'));
 
 // Apply textContent
-mainH4[0].textContent= siteContent["main-content"]['features-h4'];
-mainH4[1].textContent= siteContent["main-content"]['about-h4'];
-mainH4[2].textContent= siteContent["main-content"]['services-h4'];
-mainH4[3].textContent= siteContent["main-content"]['product-h4'];
-mainH4[4].textContent= siteContent["main-content"]['vision-h4']
+mainH4[0].textContent = siteContent["main-content"]['features-h4'];
+mainH4[1].textContent = siteContent["main-content"]['about-h4'];
+mainH4[2].textContent = siteContent["main-content"]['services-h4'];
+mainH4[3].textContent = siteContent["main-content"]['product-h4'];
+mainH4[4].textContent = siteContent["main-content"]['vision-h4']
 
 // Select Main P
 const mainP = Array.from(document.getElementsByTagName('P'));
 
 // Apply textContent
-mainP[0].textContent= siteContent["main-content"]['features-content'];
-mainP[1].textContent= siteContent["main-content"]['about-content'];
-mainP[2].textContent= siteContent["main-content"]['services-content'];
-mainP[3].textContent= siteContent["main-content"]['Product-content'];
-mainP[4].textContent= siteContent["main-content"]['vision-content']
+mainP[0].textContent = siteContent["main-content"]['features-content'];
+mainP[1].textContent = siteContent["main-content"]['about-content'];
+mainP[2].textContent = siteContent["main-content"]['services-content'];
+mainP[3].textContent = siteContent["main-content"]['Product-content'];
+mainP[4].textContent = siteContent["main-content"]['vision-content']
+
+// Target main-content IMG
+const mainIMG = document.getElementById("middle-img");
+mainIMG.src = siteContent["main-content"]["middle-img-src"];
+
+// Contact Header setting
+document.querySelector(".contact h4").textContent = siteContent.contact["contact-h4"];
+// Footer targetting and setting
+document.querySelector("footer p").textContent = siteContent.footer.copyright;
