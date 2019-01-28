@@ -53,4 +53,10 @@ ctaH1.textContent = siteContent.cta.h1;
 
 //Select CTA Button
 const ctaBtn = document.querySelector(".cta-text button");
+//Apply text content
 ctaBtn.textContent = siteContent.cta.button;
+
+//Select CTA IMG
+const ctaIMG = document.getElementById("cta-img");
+// Link iMG src
+ctaIMG.src = siteContent.cta["img-src"];
