@@ -63,10 +63,21 @@ ctaIMG.src = siteContent.cta["img-src"];
 
 // Main content General selectors
 // Select Main H4
-const mainH4 = documetn.getElementsByTagName('h4');
-Array.from(mainH4);
+const mainH4 = Array.from(document.getElementsByTagName('h4'));
+
 // Apply textContent
-mainH4.forEach(item => item.includes('-h4').textContent = item[i]);
+mainH4[0].textContent= siteContent["main-content"]['features-h4'];
+mainH4[1].textContent= siteContent["main-content"]['about-h4'];
+mainH4[2].textContent= siteContent["main-content"]['services-h4'];
+mainH4[3].textContent= siteContent["main-content"]['product-h4'];
+mainH4[4].textContent= siteContent["main-content"]['vision-h4']
 
+// Select Main P
+const mainP = Array.from(document.getElementsByTagName('P'));
 
-const mainP = document.getElementsByTagName('p')
+// Apply textContent
+mainP[0].textContent= siteContent["main-content"]['features-content'];
+mainP[1].textContent= siteContent["main-content"]['about-content'];
+mainP[2].textContent= siteContent["main-content"]['services-content'];
+mainP[3].textContent= siteContent["main-content"]['Product-content'];
+mainP[4].textContent= siteContent["main-content"]['vision-content']
