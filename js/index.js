@@ -40,3 +40,8 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Indicate select anchor tags in nav and convert to array.
+const navAnchor = Array.from(document.getElementsByTagName('a'));
+// Run for each to map anchors to nav-items via textContent
+navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`]));
