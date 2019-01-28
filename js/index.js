@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent.nav["img-src"])
 // Select anchor tags in nav and convert to array.
 const navAnchor = Array.from(document.getElementsByTagName('a'));
 // Run for each to map anchors to nav-items via textContent
-navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`], (anchor.style.color = "green")));
+navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i}`], (anchor.style.color = "green")));
 
 const prependNav = document.createElement("a");
 prependNav.innerHTML = '<a href="#" style="color: green">Prepend</a>';
