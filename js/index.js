@@ -44,26 +44,27 @@ logo.setAttribute('src', siteContent.nav["img-src"])
 // Select anchor tags in nav and convert to array.
 const navAnchor = Array.from(document.getElementsByTagName('a'));
 // Run for each to map anchors to nav-items via textContent
-navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i}`], (anchor.style.color = "green")));
+navAnchor.forEach((anchor, i)=>(anchor.textContent = siteContent.nav[`nav-item-${i + 1}`], (anchor.style.color = "green")));
 
+// Create the new HTML Elements and their content
 const prependNav = document.createElement("a");
 prependNav.innerHTML = '<a href="#" style="color: green">Prepend</a>';
 
 const appendNav = document.createElement("a");
 appendNav.innerHTML = '<a href="#" style="color: green">Append</a>';
 
+
+// Create new nav selector To append.
 const nav = document.querySelector("nav");
+// Append and prepend nav selector.
 nav.prepend(prependNav);
 // nav.append(appendNav);
 nav.appendChild(appendNav);
 
-// const navElem = document.createElement("a");
-// navElem.innerHTML = '<a href="#topofpage" style="color: green" id = topofpage >Top of Page</a>';
-
 // Select CTA H1 
 const ctaH1 = document.querySelector(".cta-text h1");
 //Apply text content
-ctaH1.innerHTML = 'DOM<br>Is<br>Awesome';
+ctaH1.innerHTML = '<h1>DOM<br>Is<br>Awesome<h1>';
 
 //Select CTA Button
 document.querySelector(".cta-text button").textContent = siteContent.cta.button;
@@ -101,7 +102,7 @@ document.querySelector(".contact h4").textContent = siteContent.contact["contact
 
 // Contact P Targeting and setting
 const contactPTags = Array.from(document.querySelectorAll('.contact p'))
-contactPTags[0].innerHTML = "123 Way 456 Street<br>Somewhere, USA>";
+contactPTags[0].innerHTML = "<p>123 Way 456 Street<br>Somewhere, USA</p>";
 contactPTags[1].textContent = siteContent.contact.phone;
 contactPTags[2].textContent = siteContent.contact.email;
 
